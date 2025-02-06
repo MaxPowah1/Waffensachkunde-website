@@ -1,0 +1,168 @@
+/* Globale Styles */
+body {
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  background-color: #f9f3f1;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+#hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("../images/waffen_bg.png") center center/cover no-repeat;
+  position: relative;
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+#hero .container {
+  position: relative;
+  z-index: 2;
+}
+#hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+#hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+/* Canvas Animation (if used) */
+#heroCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Features Section */
+#features {
+  background-color: #fff;
+}
+#features h2 {
+  margin-bottom: 2rem;
+}
+#features .border {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+#features .border:hover {
+  transform: translateY(-3px);
+}
+
+/* Screenshots Section */
+#screens {
+  background-color: #f7f7f7;
+}
+.minimal-img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.minimal-img:hover {
+  transform: scale(1.02);
+}
+
+/* Timeline Section */
+#process {
+  background-color: #343a40;
+  color: #fff;
+  padding: 6rem 0;
+}
+#process h2 {
+  font-size: 2.5rem;
+}
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+.timeline-item {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+  text-align: center;
+}
+.timeline-item .timeline-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  overflow: hidden;
+}
+.timeline-item .timeline-icon img {
+  width: 100%;
+  height: auto;
+}
+.timeline-item h5 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+.timeline-item p {
+  font-size: 1rem;
+}
+
+/* CTA Section */
+#cta {
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f7f7f7;
+}
+
+/* Footer */
+footer {
+  background-color: #f7f7f7;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Allgemeine Abstände */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+  #hero {
+    min-height: 60vh;
+    padding: 0 1rem;
+  }
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+  #process h2 {
+    font-size: 2rem;
+  }
+  .timeline-item h5 {
+    font-size: 1rem;
+  }
+  .timeline-item p {
+    font-size: 0.9rem;
+  }
+}
