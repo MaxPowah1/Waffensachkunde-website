@@ -1,6 +1,5 @@
 // Warte, bis der DOM-Inhalt vollständig geladen ist
 document.addEventListener("DOMContentLoaded", function () {
-
   // Scroll-Animation: Sichtbarkeit der Sektionen mittels IntersectionObserver steuern
   const sections = document.querySelectorAll("section");
 
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
       } else {
-        // Optional: Entferne die Klasse wieder, wenn die Sektion aus dem Viewport scrollt
+        // Optional: Klasse entfernen, wenn die Sektion aus dem Viewport scrollt
         entry.target.classList.remove("visible");
       }
     });

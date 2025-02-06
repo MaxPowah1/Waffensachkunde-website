@@ -5,12 +5,18 @@
   box-sizing: border-box;
 }
 
+/* Verwende Open Sans für den Fließtext und Montserrat für Überschriften */
 html, body {
   height: 100%;
   scroll-behavior: smooth;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: #f4f4f4;
-  color: #fff;  /* Standardmäßig weiße Schrift, damit Kontrast zu dunklen Overlays besteht */
+  color: #fff;  /* Weißer Text für gute Lesbarkeit auf dunklen Overlays */
+}
+
+/* Überschriften (H1, H2, H3, etc.) sollen Montserrat verwenden */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Parallax-Sektionen */
@@ -38,10 +44,9 @@ section.visible {
   background-position: center;
 }
 
-/* Spezifische Sektionen mit individuellen Hintergründen */
+/* Individuelle Hintergründe der Sektionen */
 #hero {
   background-image: url('../images/1.jpg');
-  color: #fff;
 }
 #about {
   background-image: url('../images/2.jpg');
@@ -56,7 +61,7 @@ section.visible {
   background-image: url('../images/5.jpg');
 }
 
-/* Overlay: Damit bleibt der Text immer lesbar */
+/* Overlay: Damit der Text immer gut lesbar bleibt */
 section::before {
   content: "";
   position: absolute;
@@ -64,18 +69,33 @@ section::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);  /* Erhöhter dunkler Overlay für bessere Lesbarkeit */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
 /* Inhalt in den Sektionen */
-section .inner {
+.inner {
   position: relative;
   z-index: 2;
   max-width: 800px;
   margin: auto;
   padding: 1rem;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Textschatten verbessert Lesbarkeit */
+}
+
+/* Box-Style für die Inhalte */
+.box {
+  background: rgba(0, 0, 0, 0.1); /* Leicht transparenter Hintergrund */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Hover-Effekt für Boxen */
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Hero-spezifische Styles */
